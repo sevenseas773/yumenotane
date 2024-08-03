@@ -103,15 +103,19 @@ a:hover {
     height: 100vh; 
     display: flex;
     top: 0;
+    flex-flow: wrap;
   }
 .nav.show {
     opacity: 1;
     visibility: visible;
     padding: 0;
 }
-.nav .burger_logo{
-    height: 130px;
-    display: flex;  
+.burger_logo_p {
+    width: 100%;
+    text-align: center;
+}
+.burger_logo_p img{
+    height: 100px;
 }
 .nav_menu_ul li{
     list-style: none;
@@ -124,7 +128,7 @@ a:hover {
     text-decoration: none; 
 }
 .nav_left{
-    padding: 10.0rem;
+    padding: 2.0rem;
 }
 .nav_right{
     position: absolute;
@@ -230,5 +234,8 @@ a:hover {
     }
     .nav .burger_logo{
         display: none;
+    }
+    .nav_left{
+        padding: 10.0rem;
     }
 }
