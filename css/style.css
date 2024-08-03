@@ -345,6 +345,13 @@ a:hover {
 .mentor_text span{
     color: #FE7D28;
 }
+.mentor_nontext{
+    display: flex;
+}
+.mentor_nontext img{
+    height: 200px;
+    justify-content: flex-end;
+}
 @media screen and (min-width: 768px) {
     .mentor_container{
         padding: 7.0rem 14.8rem;
