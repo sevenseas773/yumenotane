@@ -9,7 +9,8 @@ body {
     font-family: "Avenir", "Arial";
     font-size: 1.6em;
     font-weight: 600;
-    letter-spacing: 8px;
+    letter-spacing: 0.5em; /*修正*/
+    line-height: 40px;  /*修正*/
     text-align: center;
     padding: 0;
     margin: 0;
@@ -17,7 +18,6 @@ body {
 h1{
     font-family:"Monomaniac One";
     font-size: 7.5rem;
-    letter-spacing: 10px; /*修正*/
     font-weight: 300;
     margin:  0;
 }
@@ -186,9 +186,6 @@ a:hover {
 .firstview-container2 .top-slider{
     margin: 1.0rem 0 4.0rem 0;
 }
-.top-slider li{
-    width:171px !important
-}
 .firstview-container2 .bottom-slider{
     margin: 4.0rem 0 1.0rem 0;
 }
@@ -229,7 +226,7 @@ a:hover {
     h1 {
         font-size: 9.6rem; 
     }
-    p{
+    .firstview p{
         font-size: 2.4rem;
     }
     .nav .burger_logo{
@@ -237,5 +234,52 @@ a:hover {
     }
     .nav_left{
         padding: 10.0rem;
+    }
+}
+/*==================================================
+　Wish
+===================================*/
+.wish{
+    background: #F7F2E9;
+    text-align: left;
+}
+.wish_container{
+    padding: 5.5rem 3.0rem;
+}
+.underline {
+    position: relative;
+    display: inline-block;
+    z-index: 1; /* テキストの下に表示 */
+}
+.underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px; /* テキストの下に配置 */
+    width: 100%;
+    height: 6px; /* 下線の太さ */
+    background-color: #F8D010; /* 下線の色 */
+    transform: translateY(1px); /* 微調整 */
+    z-index: -1; /* テキストの下に表示 */
+}
+.uni-student {
+    margin-top: 4.3rem;
+}
+.orange{
+    color: #FE7D28;
+}
+.small_text{
+    font-size: 1rem;
+    opacity: 0.6;
+}
+.housewife {
+    margin-top: 3.7rem;
+}
+@media screen and (min-width: 768px) {
+    .wish_container{
+        padding: 7.0rem 14.8rem;
+    }
+    .wish_text{
+        display: flex;
     }
 }
