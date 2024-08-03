@@ -1,0 +1,216 @@
+/* CSS Document */
+html {
+    font-size: 62.5%; /* 16px * 62.5% = 10px */
+    width: 100%;
+    box-sizing: border-box;
+}
+body {
+    color: #333; /* RGB */
+    font-family: "Avenir", "Arial";
+    font-size: 1.6em;
+    font-weight: 600;
+    letter-spacing: 8px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+h1{
+    font-family:"Monomaniac One";
+    font-size: 7.5rem;
+    letter-spacing: 10px; /*修正*/
+    font-weight: 300;
+    margin:  0;
+}
+h2 {
+    font-size: 2.4rem;
+}
+a:hover {
+    opacity: 0.5;
+} 
+/*==================================================
+　ハンバーガーボタン
+===================================*/
+
+.openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: relative;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+	border-radius: 5px;
+}
+/*ボタン内側*/
+.openbtn .openbtn-area{
+    transition: all .4s;
+}
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: #F7F2E9;
+  	width: 45%;
+  }
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+/*activeクラスが付与されると
+線と周りのエリアが回転して×になる*/
+.openbtn.active .openbtn-area{
+	transform: rotateY(-360deg);
+}
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-135deg);
+    width: 30%;
+}
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(135deg);
+    width: 30%;
+}
+/*==================================================
+　ハンバーガーボタン中身
+===================================*/
+.nav {
+    z-index: 9999;
+    text-align: left;
+    background: #EBC301;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+    height: 100vh; 
+    display: flex;
+  }
+  .nav.show {
+    opacity: 1;
+    visibility: visible;
+}
+.nav .burger_logo{
+    height: 130px;
+    display: flex;  
+}
+.nav_menu_ul li{
+    list-style: none;
+}
+.nav_menu_li a{
+    color: #2E2D2C;
+    font-weight: 900;
+    line-height: 7.0rem;
+    font-size: 2.4rem;
+    text-decoration: none; 
+}
+/*==================================================
+　Firstview
+===================================*/
+.firstview{
+    background: #FE7D28;
+    border: 2px solid #2E2D2C;
+    height: 100vh;
+    position: relative;
+}
+.firstview .logo{
+    margin: 10px auto 0;
+    height: 25px;
+    position: absolute;
+    top: 0;
+}
+.firstview-container1{
+    padding: 5.0rem 0;
+}
+.firstview-container2{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.firstview-container2 p{
+    line-height: 4.0rem;
+    margin: 0;
+}
+.firstview-container2 .sliders{
+    padding-top: 3.0rem;
+}
+.firstview-container2 .top-slider, .bottom-slider{
+    background: #F7F2E9;
+    border-top: 2px solid #2E2D2C;
+    border-bottom: 2px solid #2E2D2C;
+}
+.firstview-container2 .top-slider p,.bottom-slider p{
+    margin: 0;
+}
+.top-slider,.bottom-slider {
+    padding: 0;
+}
+.firstview-container2 .top-slider{
+    margin: 1.0rem 0 4.0rem 0;
+}
+.top-slider li{
+    width:171px !important
+}
+.firstview-container2 .bottom-slider{
+    margin: 4.0rem 0 1.0rem 0;
+}
+.firstview-container2 img{
+    display: block;
+    margin: 0 auto;
+}
+.slider1{
+    padding: 0;
+}
+.slider1 img{
+    border: 2px solid #2E2D2C;
+    width: 80%;
+}
+.firstview-container2 img.logo{
+    height: 15%;
+}
+@media screen and (max-width: 768px) {
+    .nav_right .burger_photo{
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) {
+    .firstview-container1{
+        padding: 1.0rem 0;
+    }
+    .firstview-container2 {
+        padding: 0;
+        height: 100%;
+        flex-direction: column-reverse; 
+    }
+    .firstview-container2 .top-slider,.bottom-slider{
+        display: none;
+    }
+    .slider1{
+        padding: 0;
+    }
+    h1 {
+        font-size: 9.6rem; 
+    }
+    p{
+        font-size: 2.4rem;
+    }
+    .nav .burger_logo{
+        display: none;
+    }
+}
