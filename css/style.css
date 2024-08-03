@@ -104,9 +104,10 @@ a:hover {
     display: flex;
     top: 0;
   }
-  .nav.show {
+.nav.show {
     opacity: 1;
     visibility: visible;
+    padding: 0;
 }
 .nav .burger_logo{
     height: 130px;
@@ -121,6 +122,16 @@ a:hover {
     line-height: 7.0rem;
     font-size: 2.4rem;
     text-decoration: none; 
+}
+.nav_left{
+    padding: 10.0rem;
+}
+.nav_right{
+    position: absolute;
+    right: 0;
+}
+.nav_right .burger_photo{
+    height: 100vh;
 }
 /*==================================================
 　Firstview
