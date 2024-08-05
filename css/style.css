@@ -322,12 +322,12 @@ a:hover {
     color: inherit; /* リンクの色を親要素の色に合わせる */
     display: flex;
 }
-.social-link img {
+.sns img {
     width: 22px;
     height: 22px;
     align-self: center;
 }
-.social-link p {
+.sns p {
     font-size: 1rem;
     margin-left: 2.0rem;
     letter-spacing: normal;
@@ -387,3 +387,83 @@ a:hover {
 .contact_container{
     padding: 15.5rem 3.0rem;
 }
+.contact_container img{
+    height: 60px;
+    margin: 20px auto 0;
+}
+/*==================================================
+　SERVICE
+===================================*/
+.service{
+    background: #FE7D28;
+    text-align: left;
+    border: 2px solid #2E2D2C;
+    border-top: none;
+    color: #2E2D2C;
+}
+.service h2{
+    color: #F7F2E9;
+}
+.service h3{
+    font-size: 2rem;
+    color: #FE7D28;
+    text-align: center;
+}
+.service_container{
+    padding: 5.5rem 3.0rem;
+}
+.service .title{
+    text-align: center;
+}
+.about-lesson, .lesson-flow, .sample-video{
+    background: #F7F2E9;   
+    border-radius: 20px;
+    padding: 4.0rem;
+    margin-top: 5rem;
+}
+.service_container li, .small-text{
+    font-size: 1.3rem;
+    letter-spacing: 0.3em; /*修正*/
+    line-height: 20px;  /*修正*/
+}
+.about-lesson_container ul{
+    padding: 0;
+}
+.basic img{
+    height: 135px;
+}
+.youtube img{
+    height: 135px;
+}
+
+/*==================================================
+　ACHIEVEMENT
+===================================*/
+
+
+
+/*==================================================
+　COMPARISON
+===================================*/
+
+
+
+
+
+
+/* ==================================================
+　CONTACT
+===================================
+.contact{
+    background: #F7F2E9;
+    border: 2px solid #2E2D2C;
+    border-top: none;
+    color: #2E2D2C;
+}
+.contact_container{
+    padding: 15.5rem 3.0rem;
+}
+.contact_container img{
+    height: 60px;
+    margin: 20px auto 0;
+} */
