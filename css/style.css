@@ -285,7 +285,7 @@ a:hover {
     .wish_text{
         display: flex;
     }
-    .wish_text .br2,.br5,.br7,.br10{
+    .wish_text .br2,.br5,.br7{
         display: none;
     }
     .housewife{
@@ -318,7 +318,6 @@ a:hover {
 .social-link {
     display: inline-block;
     text-align: center;
-    margin: 10px;
     text-decoration: none; /* デフォルトのリンクの下線を消す */
     color: inherit; /* リンクの色を親要素の色に合わせる */
     display: flex;
@@ -347,10 +346,19 @@ a:hover {
 }
 .mentor_nontext{
     display: flex;
+    position: relative;
 }
-.mentor_nontext img{
-    height: 200px;
+.mentor_nontext .sns{
+    position: absolute;
+    right: 50px;
+    z-index: 1;
+}
+.mentor_nontext .mentor_photo{
+    height: 400px;
     justify-content: flex-end;
+}
+.mentor_nontitle{
+    margin-top: 7.0rem;
 }
 @media screen and (min-width: 768px) {
     .mentor_container{
@@ -359,4 +367,23 @@ a:hover {
     .mentor_tetx-p .br{
         display: none;
     }
+    .mentor_nontitle{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .mentor_nontext .mentor_photo{
+        height: 600px;
+    }
+}
+/*==================================================
+　CONTACT
+===================================*/
+.contact{
+    background: #F7F2E9;
+    border: 2px solid #2E2D2C;
+    border-top: none;
+    color: #2E2D2C;
+}
+.contact_container{
+    padding: 15.5rem 3.0rem;
 }
