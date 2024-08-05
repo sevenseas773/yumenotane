@@ -427,7 +427,7 @@ a:hover {
     line-height: 20px;  /*修正*/
 }
 .about-lesson_container ul{
-    padding: 0;
+    padding: 0 0 0 2.0rem;
 }
 .basic img{
     height: 135px;
