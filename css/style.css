@@ -510,22 +510,41 @@ a:hover {
    flex-direction: column;
    justify-content: start;
 } */
-.container_1 img, .container_2 img, .container_3{
-    margin: 15.0rem 0 0;
+.container_1 , .container_2 , .container_3 {
+    margin: 0 0 15.0rem;
 }
-.container_1 img, .container_2 img, .container_3 img{
+.container_1 .img1, .container_2 .img2, .container_3 .img3{
     height: 220px;
     border: 2px solid #2E2D2C;
 }
-.container_1 img, .container_3 img{
+.container_1 .img1, .container_3 .img3{
     border-top-right-radius: 20px;  
     border-bottom-right-radius: 20px; 
 }
-.container_2 img{
+.container_2 .img2{
     border-top-left-radius: 20px;  
     border-bottom-left-radius: 20px; 
 }
-
+.number1, .number2, .number3{
+    width: 9rem;
+    z-index: 1;
+}
+.container_1 , .container_3 {
+    position: relative;
+}
+.number1, .number3{
+    position: absolute;
+    top: -55px;
+    right: -50px;
+}
+.container_2 {
+    position: relative;
+}
+.number2{
+    position: absolute;
+    top: -55px;
+    left: -20px;
+}
 /*==================================================
 　COMPARISON
 ===================================*/
