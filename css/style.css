@@ -534,16 +534,16 @@ a:hover {
 }
 .number1, .number3{
     position: absolute;
-    top: -55px;
-    right: -50px;
+    top: -75px;
+    right: -60px;
 }
 .container_2 {
     position: relative;
 }
 .number2{
     position: absolute;
-    top: -55px;
-    left: -20px;
+    top: -75px;
+    left: -30px;
 }
 /*==================================================
 　COMPARISON
