@@ -19,7 +19,7 @@ h1{
     font-family:"Monomaniac One";
     font-size: 7.5rem;
     font-weight: 300;
-    margin:  0;
+    margin:  0 0 4.5rem 0;
 }
 h2 {
     font-size: 2.4rem;
@@ -161,6 +161,17 @@ a:hover {
 .firstview-container1{
     padding: 5.0rem 0;
 }
+.img_p{
+    position: absolute;
+    top: 9px;   
+    margin: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.firstview-container1 {
+    padding: 1.0rem 0;
+    margin-top: 50px;
+    }
 .firstview-container2{
     padding: 0;
     display: flex;
@@ -431,16 +442,89 @@ a:hover {
 }
 .basic img{
     height: 135px;
+    margin-top: 6rem;
 }
 .youtube img{
     height: 135px;
+    margin-top: 3rem;
 }
-
+.basic p{
+    margin: 0;
+}
+.youtube p{
+    margin: 0;
+}
+.lesson-flow_container .lesson_container{
+    display: flex;
+}
+.lesson_container img{
+    height: 80px;
+    align-self: center;
+}
+.lesson_container{
+    margin-top: 4.0rem;
+}
+.lesson-text p{
+    margin: 0 0 0 2rem;
+}
+.lesson-text .small-text{
+    font-weight: 600;
+}
+.note p{
+    font-size: 1rem;
+    opacity: 60%;
+    margin: 4.5rem 0 0;
+    letter-spacing: 0.2em;
+    line-height: normal;
+}
+.videos iframe{
+    border: 2px solid #2E2D2C;
+    border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+    .service_container{
+        padding: 12.8rem 10.0rem;
+    }
+}
 /*==================================================
 　ACHIEVEMENT
 ===================================*/
-
-
+.achievement{
+    background:#F7F2E9;
+    text-align: left;
+    border: 2px solid #2E2D2C;
+    border-top: none;
+    color: #2E2D2C;
+    line-height: 30px;
+}
+.achievement_container{
+    padding: 5.5rem 3.0rem;
+}
+.achievement .title{
+    text-align: center;
+}
+/* .onetwothree_container{
+    display: flex;
+} */
+/* .container_1 img, .container_3{
+   flex-direction: column;
+   justify-content: start;
+} */
+.container_1 img, .container_2 img, .container_3{
+    margin: 15.0rem 0 0;
+}
+.container_1 img, .container_2 img, .container_3 img{
+    height: 220px;
+    border: 2px solid #2E2D2C;
+}
+.container_1 img, .container_3 img{
+    border-top-right-radius: 20px;  
+    border-bottom-right-radius: 20px; 
+}
+.container_2 img{
+    border-top-left-radius: 20px;  
+    border-bottom-left-radius: 20px; 
+}
 
 /*==================================================
 　COMPARISON
