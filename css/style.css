@@ -659,15 +659,63 @@ a:hover {
 /*==================================================
 　COMPARISON
 ===================================*/
-
-
-
-
-
-
+.comparison{
+    background: #FE7D28;
+    border: 2px solid #2E2D2C;
+    border-top: none;
+    color: #F7F2E9;
+}
+.comparison_container{
+    padding: 5.5rem 3.0rem 8rem;
+}
+.comparison .title{
+    text-align: center;
+}
+.comparison  h2{
+    color: #F7F2E9;
+}
+.comparison  p{
+    font-size: 1.5rem;
+}
+.tables {
+    display: flex;
+    flex-direction: column;
+    gap: 7.0rem;
+    margin-top: 8rem;
+}
+.tables table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+}
+.tables th{
+    display: inline-block;
+    border: 2px solid #F7F2E9;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+}
+.tables tbody{
+    display: flex;
+    flex-direction: column;
+}
+.tables td{
+    padding: 0px;
+    border-bottom: 2px solid white;
+    line-height: 30px;
+    margin-right: 2rem;
+}
+@media screen and (min-width: 768px) {
+    .tables {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 /* ==================================================
 　CONTACT
-===================================
+=================================== */
 .contact{
     background: #F7F2E9;
     border: 2px solid #2E2D2C;
@@ -680,4 +728,12 @@ a:hover {
 .contact_container img{
     height: 60px;
     margin: 20px auto 0;
-} */
+}
+
+/* ==================================================
+　VOICE
+=================================== */
+
+/* ==================================================
+　FAQ
+=================================== */
