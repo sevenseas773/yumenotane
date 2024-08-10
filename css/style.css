@@ -417,10 +417,17 @@ a:hover {
 .service h2{
     color: #F7F2E9;
 }
+.service-title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 4rem;
+}
 .service h3{
     font-size: 2rem;
     color: #FE7D28;
     text-align: center;
+    margin: 0;
 }
 .service_container{
     padding: 5.5rem 3.0rem;
@@ -433,6 +440,7 @@ a:hover {
     border-radius: 20px;
     padding: 4.0rem;
     margin-top: 5rem;
+    border: 2px solid #2E2D2C;
 }
 .service_container li, .small-text{
     font-size: 1.3rem;
@@ -442,29 +450,38 @@ a:hover {
 .about-lesson_container ul{
     padding: 0 0 0 2.0rem;
 }
-.basic img{
-    height: 135px;
-    margin-top: 6rem;
+.basic,
+.youtube {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.basic img,
 .youtube img{
     height: 135px;
-    margin-top: 3rem;
+    border: 2px solid #2E2D2C;
+    border-radius: 20px;
 }
-.basic p{
-    margin: 0;
-}
+.basic p,
 .youtube p{
     margin: 0;
 }
-.lesson-flow_container .lesson_container{
+.lesson-flow_container_nontitle {
     display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+}
+.lesson_container{
+    display: flex;
+    align-items: start;
 }
 .lesson_container img{
     height: 80px;
     align-self: center;
 }
 .lesson_container{
-    margin-top: 4.0rem;
+    margin-bottom: 4.0rem;
 }
 .lesson-text p{
     margin: 0 0 0 2rem;
@@ -472,20 +489,62 @@ a:hover {
 .lesson-text .small-text{
     font-weight: 600;
 }
+.note{
+    display: flex;
+    justify-content: flex-start;
+}
 .note p{
     font-size: 1rem;
     opacity: 60%;
-    margin: 4.5rem 0 0;
+    margin: 0;
     letter-spacing: 0.2em;
     line-height: normal;
+}
+.videos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5.5rem;
 }
 .videos iframe{
     border: 2px solid #2E2D2C;
     border-radius: 10px;
 }
 @media screen and (min-width: 768px) {
+    .service h3{
+        font-size: 2.4rem;
+    }
     .service_container{
         padding: 12.8rem 10.0rem;
+    }
+    .about-lesson, .lesson-flow, .sample-video{
+        padding: 10.0rem 9.0rem;
+    }
+    .about-lesson_container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20.0rem;
+        margin-top: 100px;
+      }
+    .basic img,
+    .youtube img{
+    height: 200px;
+    }
+    .basic p,
+    .youtube p{
+    margin: 0;
+    }
+    .basic,
+    .youtube {
+        width: 300px;
+    }
+    .lesson-flow{
+        padding: 10rem 20rem;
+    }
+    .videos{
+        flex-direction: row;
+        justify-content: center;
     }
 }
 /*==================================================
@@ -500,20 +559,26 @@ a:hover {
     line-height: 30px;
 }
 .achievement_container{
-    padding: 5.5rem 3.0rem;
+    padding: 5.5rem 0rem;
 }
-.achievement .title{
+.achievement .title-b{
     text-align: center;
+    margin-bottom: 9rem;
 }
-/* .onetwothree_container{
+.title-b p{
+    color: #FE7D28;
+}
+.onetwothree_container{
     display: flex;
-} */
-/* .container_1 img, .container_3{
-   flex-direction: column;
-   justify-content: start;
-} */
+    flex-direction: column;
+}
+.onetwothree_container p{
+    margin: 1.6rem;
+}
 .container_1 , .container_2 , .container_3 {
     margin: 0 0 15.0rem;
+    display: flex;
+    flex-direction: column;
 }
 .container_1 .img1, .container_2 .img2, .container_3 .img3{
     height: 220px;
@@ -527,25 +592,30 @@ a:hover {
     border-top-left-radius: 20px;  
     border-bottom-left-radius: 20px; 
 }
-.number1, .number2, .number3{
-    width: 9rem;
-    z-index: 1;
-}
-.container_1 , .container_3 {
+.img_container {
     position: relative;
+    width: 400px;  
 }
-.number1, .number3{
+.number1,
+.number3 {
     position: absolute;
-    top: -75px;
-    right: -60px;
-}
-.container_2 {
-    position: relative;
+    top: -90px;
+    right: 0;
+  }
+/* .container_2 {
+    flex-direction: row-reverse;
+} */
+.container_2 .img_container{
+    flex-direction: row-reverse;
 }
 .number2{
-    position: absolute;
-    top: -75px;
-    left: -30px;
+   position: absolute;
+   top: -90px;
+   left: 0;
+}
+.container_2 .img_container{
+    display: flex;
+    flex-direction: row-reverse;
 }
 .more-button{
     text-align: center;
@@ -558,6 +628,33 @@ a:hover {
     padding: 1.5rem;
     border: 1px solid #2E2D2C;
     border-radius: 30px;
+}
+@media screen and (min-width: 768px) {
+ .container_1 , .container_3 {
+    flex-direction: row;
+ }  
+ .container_2{
+    flex-direction: row-reverse;
+ }
+ .container_1 .img1, .container_2 .img2, .container_3 .img3{
+    height: 390px;
+ }
+ .img_container {
+    width: 670px;  
+ }
+ .number1,
+ .number3 {
+    top: -90px;
+    right: 0;
+ }
+ .number2{
+    top: -90px;
+   left: 0;
+ }
+ .onetwothree_container p{
+    align-self: center;
+}
+
 }
 /*==================================================
 　COMPARISON
