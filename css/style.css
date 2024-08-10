@@ -381,6 +381,8 @@ a:hover {
     .mentor_nontitle{
         display: flex;
         flex-direction: row-reverse;
+        gap: 40px;
+        justify-content: space-between;
     }
     .mentor_nontext .mentor_photo{
         height: 600px;
@@ -544,6 +546,18 @@ a:hover {
     position: absolute;
     top: -75px;
     left: -30px;
+}
+.more-button{
+    text-align: center;
+}
+.more-button a{
+    background: #9DBAF0;
+    color: #fff;
+    text-decoration: none;
+    display: inline;
+    padding: 1.5rem;
+    border: 1px solid #2E2D2C;
+    border-radius: 30px;
 }
 /*==================================================
 　COMPARISON
