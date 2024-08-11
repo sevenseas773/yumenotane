@@ -358,11 +358,7 @@ a:hover {
 .mentor_nontext{
     display: flex;
     position: relative;
-}
-.mentor_nontext .sns{
-    position: absolute;
-    right: 50px;
-    z-index: 1;
+    justify-content: center;
 }
 .mentor_nontext .mentor_photo{
     height: 400px;
@@ -371,9 +367,12 @@ a:hover {
 .mentor_nontitle{
     margin-top: 7.0rem;
 }
+.mentor_nontext .sns{
+    margin-right: -30px;
+}
 @media screen and (min-width: 768px) {
     .mentor_container{
-        padding: 7.0rem 14.8rem;
+        padding: 5.5rem 10rem 10rem;
     }
     .mentor_tetx-p .br{
         display: none;
@@ -384,6 +383,10 @@ a:hover {
         gap: 40px;
         justify-content: space-between;
     }
+    .mentor_nontext .sns {
+        margin-right: -118px;
+        margin-top: 20px;
+      }
     .mentor_nontext .mentor_photo{
         height: 600px;
     }
@@ -438,7 +441,7 @@ a:hover {
 .about-lesson, .lesson-flow, .sample-video{
     background: #F7F2E9;   
     border-radius: 20px;
-    padding: 4.0rem;
+    padding: 3.7rem;
     margin-top: 5rem;
     border: 2px solid #2E2D2C;
 }
@@ -515,7 +518,7 @@ a:hover {
         font-size: 2.4rem;
     }
     .service_container{
-        padding: 12.8rem 10.0rem;
+        padding: 5.5rem 10rem 10rem;
     }
     .about-lesson, .lesson-flow, .sample-video{
         padding: 10.0rem 9.0rem;
@@ -559,7 +562,7 @@ a:hover {
     line-height: 30px;
 }
 .achievement_container{
-    padding: 5.5rem 0rem;
+    padding: 5.5rem 0rem 8rem;
 }
 .achievement .title-b{
     text-align: center;
@@ -625,7 +628,7 @@ a:hover {
     color: #fff;
     text-decoration: none;
     display: inline;
-    padding: 1.5rem;
+    padding: 1rem 2rem;
     border: 1px solid #2E2D2C;
     border-radius: 30px;
 }
@@ -674,9 +677,6 @@ a:hover {
 .comparison  h2{
     color: #F7F2E9;
 }
-.comparison  p{
-    font-size: 1.5rem;
-}
 .tables {
     display: flex;
     flex-direction: column;
@@ -694,17 +694,19 @@ a:hover {
     display: inline-block;
     border: 2px solid #F7F2E9;
     border-radius: 50px;
-    padding: 0.5rem 1.5rem;
+    padding: 0 4rem;
 }
 .tables tbody{
     display: flex;
     flex-direction: column;
 }
 .tables td{
+    font-size: 1.5rem;
+    font-weight: 300;
     padding: 0px;
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
     line-height: 30px;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
 }
 @media screen and (min-width: 768px) {
     .tables {
@@ -729,11 +731,230 @@ a:hover {
     height: 60px;
     margin: 20px auto 0;
 }
-
 /* ==================================================
 　VOICE
 =================================== */
+.voice{
+    background: #FE7D28;
+    border: 2px solid #2E2D2C;
+    border-top: none;
+    color: #F7F2E9;
+}
+.voice_container{
+    padding: 5.5rem 3.0rem 8rem;
+    position: relative;
+}
+.voice .title{
+    text-align: center;
+    margin-bottom: 45px;
+}
+.voice  h2{
+    color: #F7F2E9;
+}
+.voice  h3{
+    line-height: normal;
+    font-size: 1.6rem;
+}
+.voice span{
+    color: #FE7D28;
+}
+.quote_container{
+    position: relative;
+}
+.quotation-top{
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 6rem;
+}
+.quotation-bottom{
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    width: 6rem;
+}
+.voice-text_container{
+    background:#F7F2E9;
+    border: 2px solid #2E2D2C;
+    border-radius: 20px;
+    color: #2E2D2C;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.voice-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.voice-title img{
+    width: 233px;
+}
+.voice-face{
+    width: 8rem;
+}
+.voice-text_container img{
+    margin-bottom: 20px;
+}
+.voice-text_container p{
+    text-align: left;
+    font-size: 1.4rem;
+    color: #2E2D2C;
+    line-height: 25px;
+    letter-spacing: 0.4rem;
+    margin: 0 auto;
+    
+}
+@media screen and (min-width: 768px) {
+    .voice_container{
+        padding: 5.5rem 10rem 10rem;
+    }
+    .voice-text_container .delete-br{
+        display: none;
+    }
+    .voice-text_container{
+        padding: 3rem 24rem 8rem;
+    }
+    .voice-title img{
+        width: 400px;
+    }
+}
+/* NEXTボタンのカスタムスタイル */
+
+.next {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    background: none; /* 背景色を削除 */
+    border: none; /* ボーダーを削除 */
+    padding: 0;
+    cursor: pointer;
+    z-index: 100;
+    display: flex; /* テキストと画像を横並びに */
+    align-items: center; /* テキストと画像を垂直方向に中央揃え */
+}
+
+/* NEXTボタンのテキストスタイル */
+.next span {
+    font-size: 1.6rem;
+    letter-spacing: 0.3rem;
+    color: #F7F2E9;
+    margin-right: 10px; /* 画像との間にスペースを追加 */
+}
+
+/* NEXTボタンの画像サイズ調整 */
+.next img {
+    width: 20px; /* 画像の幅を調整 */
+    height: auto; /* 高さを自動調整 */
+}
+
+/* NEXTボタンのホバースタイル（必要に応じて追加） */
+.next:hover img {
+    opacity: 0.8; /* ホバー時に少し透明にするなど */
+}
+
+/* スライダーのデフォルト矢印を非表示にする */
+/* .slick-next.slick-arrow {
+    display: none !important;
+} */
+.slick-prev.slick-arrow {
+    display: none !important;
+}
 
 /* ==================================================
 　FAQ
 =================================== */
+.FAQ{
+    background:#F7F2E9;
+    text-align: center;
+    border: 2px solid #2E2D2C;
+    border-top: none;
+    color: #2E2D2C;
+}
+.FAQ_container{
+    padding: 5.5rem 0rem 8rem;
+}
+.FAQ .title-b{
+    text-align: center;
+    margin-bottom: 9rem;
+}
+.FAQ h2{
+    margin-bottom: 0;
+}
+.faq-title_p{
+    margin: 0;
+}
+.title-b p{
+    color: #FE7D28;
+}
+.FAQ_container{
+    padding: 5.5rem 3.0rem 8rem;
+}
+.faq-container button{
+    color: #333; /* RGB */
+    font-family: "Avenir", "Arial";
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.3em; /*修正*/
+    line-height: 30px;  /*修正*/
+    border: 2px solid #2E2D2C;
+}
+.faq-container {
+    background-color: #ffd7b5;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.faq-question {
+    background-color: #ffb380;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+.faq-answer {
+    padding: 0 18px;
+    background-color: #ffd7b5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-right: 2px solid #2E2D2C;
+    border-bottom: 2px solid #2E2D2C;
+    border-left: 2px solid #2E2D2C;
+    border-top: none;
+}
+.faq-answer p{
+    letter-spacing: 0.3em; /*修正*/
+    line-height: 30px;  /*修正*/
+    text-align: left;
+}
+.faq-question:after {
+    content: '\02795';
+    font-size: 13px;
+    color: black;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2796";
+}
+@media screen and (min-width: 768px) {
+    .FAQ_container{
+        padding: 5.5rem 10rem 8rem;
+    }
+}
+/* ==================================================
+　footer
+=================================== */
+footer{
+    background: #FE7D28;
+    border: 2px solid #2E2D2C;
+    border-top: none;
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+}
