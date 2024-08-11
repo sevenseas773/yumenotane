@@ -583,9 +583,15 @@ a:hover {
     display: flex;
     flex-direction: column;
 }
-.container_1 .img1, .container_2 .img2, .container_3 .img3{
+.container_1 .img1, .container_3 .img3{
     height: 220px;
     border: 2px solid #2E2D2C;
+    border-left: none;
+}
+.container_2 .img2{
+    height: 220px;
+    border: 2px solid #2E2D2C;
+    border-right: none;
 }
 .container_1 .img1, .container_3 .img3{
     border-top-right-radius: 20px;  
