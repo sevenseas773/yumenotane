@@ -708,43 +708,48 @@ header{
 .comparison  h2{
     color: #F7F2E9;
 }
-.tables {
+.comparison-block{
     display: flex;
     flex-direction: column;
-    gap: 7.0rem;
-    margin-top: 8rem;
-}
-.tables table{
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    
 }
-.tables th{
+.comparison-title {
     display: inline-block;
     border: 2px solid #F7F2E9;
     border-radius: 50px;
     padding: 0 4rem;
-}
-.tables tbody{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    margin-top: 5rem;
 }
-.tables td{
-    font-size: 1.5rem;
+.comparison-title img{
+    width: 180px;
+}
+.comparison_row {
+    display: flex;
+    text-align: left;
+    line-height: normal;
+    letter-spacing: 0.4rem;
+    margin: 1rem;
+    width: 366px;
     font-weight: 300;
-    padding: 0px;
-    border-bottom: 1px solid white;
-    line-height: 30px;
-    /* margin-right: 2rem; */
 }
-@media screen and (min-width: 768px) {
-    .tables {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+.comparison_row dt{
+    width: 166px;
+    border-bottom: 2px solid #F7F2E9;
+}
+.comparison_row .dd-div{
+    display: flex; /*効いてない*/
+    justify-content: center; /*効いてない*/
+    align-items: center; /*効いてない*/
+}
+.comparison_row dd{
+    margin: 0 0 0 2rem;
+    width: 180px;
+    border-bottom: 2px solid #F7F2E9;
 }
 /* ==================================================
 　CONTACT
