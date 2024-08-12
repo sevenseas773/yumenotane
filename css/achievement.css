@@ -1,0 +1,238 @@
+/* CSS Document */
+html {
+    font-size: 62.5%; /* 16px * 62.5% = 10px */
+    width: 100%;
+    box-sizing: border-box;
+}
+body {
+    color: #333; /* RGB */
+    font-family: "Avenir", "Arial";
+    font-size: 1.6em;
+    font-weight: 600;
+    letter-spacing: 0.5em; /*修正*/
+    line-height: 40px;  /*修正*/
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+h1{
+    font-family:"Monomaniac One";
+    font-size: 7.5rem;
+    font-weight: 300;
+    margin:  8rem 0 4.5rem 0;
+}
+h2 {
+    font-size: 2.4rem;
+    line-height: 5.0rem;
+}
+a:hover {
+    opacity: 0.5;
+} 
+/*==================================================
+　ハンバーガーボタン
+===================================*/
+header{
+    position: relative;
+}
+.openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: fixed;
+    top: 5px;
+    right: 20px;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+	border-radius: 5px;
+    z-index: 9999;
+}
+/*ボタン内側*/
+.openbtn .openbtn-area{
+    transition: all .4s;
+}
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: #F7F2E9;
+  	width: 45%;
+  }
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+/*activeクラスが付与されると
+線と周りのエリアが回転して×になる*/
+.openbtn.active .openbtn-area{
+	transform: rotateY(-360deg);
+}
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-135deg);
+    width: 30%;
+}
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(135deg);
+    width: 30%;
+}
+/*==================================================
+　ハンバーガーボタン中身
+===================================*/
+.nav {
+    z-index: 9998;
+    text-align: left;
+    background: #FE7D28;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+    height: 100vh; 
+    display: flex;
+    top: 0;
+    flex-flow: wrap;
+  }
+.nav.show {
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
+}
+.burger_logo_p {
+    width: 100%;
+    text-align: center;
+}
+.burger_logo_p img{
+    height: 100px;
+}
+.nav_menu_ul li{
+    list-style: none;
+}
+.nav_menu_li a{
+    color: #2E2D2C;
+    font-weight: 900;
+    line-height: 7.0rem;
+    font-size: 2.4rem;
+    text-decoration: none; 
+}
+.nav_left{
+    padding: 2.0rem;
+}
+.nav_right{
+    position: absolute;
+    right: 0;
+}
+.nav_right .burger_photo{
+    height: 100vh;
+}
+/*==================================================
+　Achievement Details
+===================================*/
+.achievement{
+    background:#F7F2E9;
+    text-align: left;
+    border: 2px solid #2E2D2C;
+    border-top: none;
+    color: #2E2D2C;
+    line-height: 30px;
+}
+.achievement_container{
+    padding: 5.5rem 5rem 8rem;
+}
+.achievement .title-b{
+    text-align: center;
+    margin-bottom: 9rem;
+}
+.title-b p{
+    color: #FE7D28;
+}
+.details_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.each_container img,
+.each_container iframe
+{
+    width: 283px;
+    height: 176px;
+    border-radius: 15px;
+    border: 2px solid #2E2D2C;
+}
+.details-text{
+    width: 283px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.details-text h4{
+    letter-spacing: 0.4rem;
+    margin: 0rem;
+}
+.details-text p{
+    letter-spacing: 0.4rem;
+    opacity: 60%;
+    margin-top: 0;
+}
+@media screen and (min-width: 768px) {
+    .achievement_container{
+        padding: 5.5rem 20rem 8rem;
+    }
+    .details_container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    .each_container{
+        align-self: baseline;
+    }
+}
+/*==================================================
+　CONTACT
+===================================*/
+.contact{
+    background: #FE7D28;
+    border: 2px solid #2E2D2C;
+    border-top: none;
+    color: #2E2D2C;
+}
+.contact h2{
+    font-size: 2rem;
+    line-height: 4.0rem;
+}
+.contact_container{
+    padding: 15.5rem 3.0rem;
+}
+.contact_container img{
+    height: 60px;
+    margin: 20px auto 0;
+}
+/* ==================================================
+　footer
+=================================== */
+footer{
+    background: #F7F2E9;
+    border: 2px solid #2E2D2C;
+    border-top: none;
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+}

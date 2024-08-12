@@ -592,11 +592,24 @@ header{
 }
 .onetwothree_container p{
     margin: 1.6rem;
+    width: 354px;
+    margin: 0;
 }
 .container_1 , .container_2 , .container_3 {
     margin: 0 0 15.0rem;
     display: flex;
     flex-direction: column;
+}
+.container_right{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.container_2 {
+    margin: 0 0 15.0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .container_1 .img1, .container_3 .img3{
     height: 220px;
@@ -626,9 +639,6 @@ header{
     top: -90px;
     right: 0;
   }
-/* .container_2 {
-    flex-direction: row-reverse;
-} */
 .container_2 .img_container{
     flex-direction: row-reverse;
 }
@@ -637,10 +647,10 @@ header{
    top: -90px;
    left: 0;
 }
-.container_2 .img_container{
+/* .container_2 .img_container{
     display: flex;
     flex-direction: row-reverse;
-}
+} */
 .more-button{
     text-align: center;
 }
