@@ -132,4 +132,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-  
+window.addEventListener('scroll', function() {
+    var contactButtonImg = document.querySelector('.contact-button img');
+    
+    if (window.innerHeight + window.scrollY >= 845) {
+        contactButtonImg.classList.add('visible');
+    } else {
+        contactButtonImg.classList.remove('visible');
+    }
+});
