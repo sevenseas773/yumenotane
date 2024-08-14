@@ -57,7 +57,7 @@ header{
     left: 14px;
     height: 3px;
     border-radius: 2px;
-    background: #F7F2E9;
+    background: #FE7D28;
   	width: 45%;
   }
 .openbtn span:nth-of-type(1) {
@@ -95,7 +95,7 @@ header{
 .nav {
     z-index: 9998;
     text-align: left;
-    background: #FE7D28;
+    background: #F7F2E9;
     position: fixed;
     top: 3rem;
     left: 0;
@@ -141,6 +141,11 @@ header{
 }
 .nav_right .burger_photo{
     height: 100vh;
+}
+@media screen and (max-width: 768px) {
+    .nav_right .burger_photo{
+        display: none;
+    }
 }
 /*==================================================
 　Achievement Details

@@ -611,27 +611,32 @@ header{
     flex-direction: column;
     justify-content: flex-end;
 }
+.container_1 p,
+.container_3 p{
+    margin-left: 30px;
+}
+
 .container_1 .img1, .container_3 .img3{
     height: 220px;
     border: 2px solid #2E2D2C;
     border-left: none;
+    border-top-right-radius: 20px;  
+    border-bottom-right-radius: 20px; 
 }
 .container_2 .img2{
     height: 220px;
     border: 2px solid #2E2D2C;
     border-right: none;
-}
-.container_1 .img1, .container_3 .img3{
-    border-top-right-radius: 20px;  
-    border-bottom-right-radius: 20px; 
-}
-.container_2 .img2{
     border-top-left-radius: 20px;  
     border-bottom-left-radius: 20px; 
 }
 .img_container {
     position: relative;
-    width: 400px;  
+    width: 354px;  
+}
+.container_2 .img_container {
+    text-align: right;
+    flex-direction: row-reverse;
 }
 .number1,
 .number3 {
@@ -639,18 +644,11 @@ header{
     top: -90px;
     right: 0;
   }
-.container_2 .img_container{
-    flex-direction: row-reverse;
-}
 .number2{
    position: absolute;
    top: -90px;
    left: 0;
 }
-/* .container_2 .img_container{
-    display: flex;
-    flex-direction: row-reverse;
-} */
 .more-button{
     text-align: center;
 }
@@ -742,14 +740,20 @@ header{
     border-bottom: 2px solid #F7F2E9;
 }
 .comparison_row .dd-div{
-    display: flex; /*効いてない*/
-    justify-content: center; /*効いてない*/
-    align-items: center; /*効いてない*/
+    text-align: center;
 }
 .comparison_row dd{
     margin: 0 0 0 2rem;
     width: 180px;
     border-bottom: 2px solid #F7F2E9;
+}
+@media screen and (min-width: 768px) {
+    .comparison-block_container{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 50px;
+    }
 }
 /* ==================================================
 　CONTACT
@@ -857,7 +861,6 @@ header{
     }
 }
 /* NEXTボタンのカスタムスタイル */
-
 .next {
     position: absolute;
     right: 40px;
@@ -891,9 +894,9 @@ header{
 }
 
 /* スライダーのデフォルト矢印を非表示にする */
-/* .slick-next.slick-arrow {
+.slick-next.slick-arrow {
     display: none !important;
-} */
+}
 .slick-prev.slick-arrow {
     display: none !important;
 }
@@ -976,7 +979,7 @@ header{
     float: right;
     margin-left: 5px;
 }
-.active:after {
+.faq-answer .active:after {
     content: "\2796";
 }
 @media screen and (min-width: 768px) {

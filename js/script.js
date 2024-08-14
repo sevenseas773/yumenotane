@@ -6,6 +6,13 @@
     },
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
+  $(".openbtn").click(function () {
+    $(this).toggleClass('active');
+    $('.nav').toggleClass('show');
+});
+$(".nav_menu_li").click(function () {
+    $('.nav').removeClass('show');
+});
 $('.slider1').slick({
     arrows: false,//左右の矢印はなし
     autoplay: true,//自動的に動き出すか。初期値はfalse。
@@ -86,9 +93,9 @@ $('.bottom-slider').slick({
     }
 ]
 });
-$(".openbtn").click(function () {
-    $(this).toggleClass('active');
-    $('.nav').toggleClass('show');
+// カスタムNEXTボタンのクリックイベントを設定
+document.querySelector('.next').addEventListener('click', function() {
+    $('.slider2').slick('slickNext');
 });
 $('.slider2').slick({
     arrows: true,//左右の矢印はなし
