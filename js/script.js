@@ -6,13 +6,21 @@
     },
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
-  $(".openbtn").click(function () {
+// ハンバーガーボタンのクリックイベント
+$(".openbtn").click(function () {
     $(this).toggleClass('active');
     $('.nav').toggleClass('show');
 });
-$(".nav_menu_li").click(function () {
+
+// ナビゲーションメニューのリンククリックイベント
+$(".nav_menu_li a").click(function () {
+    // メニューを閉じる
     $('.nav').removeClass('show');
+    // ハンバーガーボタンを三本線に戻す
+    $('.openbtn').removeClass('active');
 });
+
+// スライダー
 $('.slider1').slick({
     arrows: false,//左右の矢印はなし
     autoplay: true,//自動的に動き出すか。初期値はfalse。
@@ -97,7 +105,10 @@ $('.bottom-slider').slick({
 document.querySelector('.next').addEventListener('click', function() {
     $('.slider2').slick('slickNext');
 });
+// FAQスライダー
 $('.slider2').slick({
+    dots: true, // ドットナビゲーションを表示
+    dotsClass: 'slick-dots', // ドットのクラス名（デフォルト）
     arrows: true,//左右の矢印はなし
     autoplay: false,//自動的に動き出すか。初期値はfalse。
     autoplaySpeed: 0,//自動的に動き出す待ち時間。初期値は3000ですが今回の見せ方では0
@@ -147,4 +158,23 @@ window.addEventListener('scroll', function() {
     } else {
         contactButtonImg.classList.remove('visible');
     }
+});
+// FAQのボタン
+$(document).ready(function() {
+    $('.faq-question').click(function() {
+        // クリックされた質問に対応する回答要素
+        const answer = $(this).next('.faq-answer');
+
+        // すべての.faq-answer要素のborder-bottomをリセット
+        $('.faq-answer').not(answer).css('border-bottom', '');
+
+        // クリックされた質問の次の兄弟要素が.faq-answerであれば
+        if (answer.css('border-bottom') === '2px solid rgb(46, 45, 44)') {
+            // 既に表示されている場合は非表示にする
+            answer.css('border-bottom', '');
+        } else {
+            // そうでなければ、border-bottomを設定
+            answer.css('border-bottom', '2px solid #2E2D2C');
+        }
+    });
 });

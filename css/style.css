@@ -469,6 +469,9 @@ header{
   flex-direction: column;
   align-items: center;
 }
+.youtube {
+    margin-top: 60px;
+}
 .basic img,
 .youtube img{
     height: 135px;
@@ -539,6 +542,9 @@ header{
         gap: 20.0rem;
         margin-top: 100px;
       }
+    .youtube {
+        margin-top: 0px;
+    }
     .basic img,
     .youtube img{
     height: 200px;
@@ -723,8 +729,18 @@ header{
     width: 160px;
     margin-top: 5rem;
 }
-.comparison-title img{
-    width: 180px;
+.comparison-title_b{
+    display: inline-block;
+    border-radius: 50px;
+    padding: 0 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin-top: 5rem;
+}
+.comparison-title_b img{
+    width: 250px;
 }
 .comparison_row {
     display: flex;
@@ -844,7 +860,9 @@ header{
     line-height: 25px;
     letter-spacing: 0.4rem;
     margin: 0 auto;
-    
+}
+.slick-track{
+    padding-top: 20px;
 }
 @media screen and (min-width: 768px) {
     .voice_container{
@@ -963,7 +981,7 @@ header{
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     border-right: 2px solid #2E2D2C;
-    border-bottom: 2px solid #2E2D2C;
+    /* border-bottom: 2px solid #2E2D2C; */
     border-left: 2px solid #2E2D2C;
     border-top: none;
 }
@@ -987,6 +1005,70 @@ header{
         padding: 5.5rem 10rem 8rem;
     }
 }
+/* ドットのコンテナのスタイル */
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* 各ドットアイテムのスタイル */
+.slick-dots li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* ドットボタンのスタイル */
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+/* ドットの見た目 */
+.slick-dots li button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #F7F2E9;
+    opacity: 1;
+}
+
+/* アクティブなドットのスタイル */
+.slick-dots li.slick-active button:before {
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border: 2px solid #F7F2E9;
+    box-sizing: border-box;
+}
+
 /* ==================================================
 　footer
 =================================== */
