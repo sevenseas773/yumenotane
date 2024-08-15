@@ -188,6 +188,9 @@ header{
 .firstview-container2 .sliders{
     padding-top: 3.0rem;
 }
+.slick-track{
+    padding-top: 0 !important;
+}
 .firstview-container2 .top-slider, .bottom-slider{
     background: #F7F2E9;
     border-top: 2px solid #2E2D2C;
