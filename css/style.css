@@ -956,7 +956,7 @@ header{
 }
 .faq-container button{
     color: #333; /* RGB */
-    font-family: "Avenir", "'Noto Sans JP'";
+    font-family: "Avenir", 'Noto Sans JP';
     font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: 0.3em; /*修正*/
