@@ -6,7 +6,7 @@ html {
 }
 body {
     color: #333; /* RGB */
-    font-family: 'Avenir', 'Lato';
+    font-family: 'Avenir','Noto Sans JP';
     font-size: 1.6em;
     font-weight: 600;
     letter-spacing: 0.5em; /*修正*/
@@ -28,15 +28,6 @@ h2 {
 a:hover {
     opacity: 0.5;
 } 
-@font-face {
-    font-family: 'Avenir';
-    src: url('path/to/Avenir.woff2') format('woff2'),
-         url('path/to/Avenir.woff') format('woff'),
-         url('path/to/Avenir.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
 /*==================================================
 　ハンバーガーボタン
 ===================================*/
