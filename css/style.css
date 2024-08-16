@@ -6,9 +6,7 @@ html {
 }
 body {
     color: #333; /* RGB */
-    font-family: 'Avenir',  'Helvetica Neue';
-    src: url('path/to/avenir.woff2') format('woff2'),
-         url('path/to/avenir.woff') format('woff');
+    font-family: 'Avenir';
     font-size: 1.6em;
     font-weight: 600;
     letter-spacing: 0.5em; /*修正*/
@@ -30,6 +28,15 @@ h2 {
 a:hover {
     opacity: 0.5;
 } 
+@font-face {
+    font-family: 'Avenir';
+    src: url('path/to/Avenir.woff2') format('woff2'),
+         url('path/to/Avenir.woff') format('woff'),
+         url('path/to/Avenir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 /*==================================================
 　ハンバーガーボタン
 ===================================*/
@@ -888,7 +895,7 @@ header{
 .next {
     position: absolute;
     right: 40px;
-    bottom: 40px;
+    bottom: 20px;
     background: none; /* 背景色を削除 */
     border: none; /* ボーダーを削除 */
     padding: 0;
