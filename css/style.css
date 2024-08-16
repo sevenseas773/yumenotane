@@ -6,7 +6,7 @@ html {
 }
 body {
     color: #333; /* RGB */
-    font-family: 'Avenir';
+    font-family: 'Avenir', 'Lato';
     font-size: 1.6em;
     font-weight: 600;
     letter-spacing: 0.5em; /*修正*/
