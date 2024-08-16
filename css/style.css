@@ -820,10 +820,12 @@ header{
 }
 .quote_container{
     position: relative;
+    padding-top: 30px;
+    margin-bottom: 30px;
 }
 .quotation-top{
     position: absolute;
-    top: -30px;
+    top: 0px;
     left: 0;
     width: 6rem;
 }
@@ -954,7 +956,7 @@ header{
 }
 .faq-container button{
     color: #333; /* RGB */
-    font-family: "Avenir", "Arial";
+    font-family: "Avenir", "'Noto Sans JP'";
     font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: 0.3em; /*修正*/
